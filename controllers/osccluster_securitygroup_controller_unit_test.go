@@ -1134,7 +1134,7 @@ func TestReconcileCreateSecurityGroupFailedCreate(t *testing.T) {
 			expTagFound:                      false,
 			expCreateSecurityGroupErr:        fmt.Errorf("CreateSecurityGroup generic error"),
 			expReadTagErr:                    nil,
-			expReconcileSecurityGroupErr:     fmt.Errorf("CreateSecurityGroup generic error cannot create securityGroup for Osccluster test-system/test-osc"),
+			expReconcileSecurityGroupErr:     fmt.Errorf("cannot create security group for OscCluster test-system/test-osc: CreateSecurityGroup generic error"),
 		},
 	}
 	for _, sgtc := range securityGroupTestCases {
@@ -1228,7 +1228,7 @@ func TestReconcileCreateSecurityGroupResourceId(t *testing.T) {
 			expNetFound:                      true,
 			expGetSecurityGroupIdsFromNetIds: nil,
 			expReadTagErr:                    fmt.Errorf("ReadTag generic error"),
-			expReconcileSecurityGroupErr:     fmt.Errorf("ReadTag generic error cannot get tag for OscCluster test-system/test-osc"),
+			expReconcileSecurityGroupErr:     fmt.Errorf("cannot get tag for OscCluster test-system/test-osc: ReadTag generic error"),
 		},
 	}
 	for _, sgtc := range securityGroupTestCases {
